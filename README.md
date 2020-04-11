@@ -16,11 +16,7 @@ abstract class BaseActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        if (scope != lifecycleScope) {
-            bindScope(scope)
-        }
-
+        // Add this line.
         setupActivityProvider(scope)
     }
 }
