@@ -12,12 +12,10 @@ Inject Android Activity/Fragment instance with Koin scope.
 ```kotlin
 abstract class BaseActivity: AppCompatActivity() {
 
-    open val scope: Scope by lazy { lifecycleScope }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Add this line.
-        setupActivityProvider(scope)
+        setupActivityProvider(lifecycleScope)
     }
 }
 ```
@@ -34,6 +32,7 @@ val sampleModule = module {
     // ...
     // Lifecycle scope inject
     scope<LifecycleScopeActivity> {
+        // use Scope.currentActivity() to inject activity instance
         scoped { SampleModuleImpl(currentActivity()) } bind SampleModule::class
         // or use Scope.get()
         // scoped { SampleModuleImpl(get()) } bind SampleModule::class
