@@ -1,6 +1,8 @@
 Koin Android Component Inject
 ---
 
+[![](https://jitpack.io/v/twiceyuan/KoinAndroidComponentInject.svg)](https://jitpack.io/#twiceyuan/KoinAndroidComponentInject)
+
 Inject Android Activity/Fragment instance with Koin scope.
 
 ## Get Start
@@ -55,4 +57,13 @@ class MainActivity : BaseActivity() {
 
 Also see samples in submodule: sample/sample-submodule
 
+## How to use
+
+```gradle
+// Add maven source
+maven { url 'https://jitpack.io/' }
+
+// Add dependency
+implementation 'com.github.twiceyuan.KoinAndroidComponentInject:android-component-inject:cee63def7f'
+```
 

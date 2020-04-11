@@ -41,5 +41,8 @@ dependencies {
     implementation koin.android_scope
 
     implementation project(':sample-module')
-    implementation project(path: ':android-component-inject')
+
+    // from jitpack.io
+    // implementation 'com.github.twiceyuan.KoinAndroidComponentInject:android-component-inject:cee63def7f'
+    implementation project(':android-component-inject')
 }
