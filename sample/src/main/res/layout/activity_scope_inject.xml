@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.CustomScopeActivity">
+
+    <TextView
+        android:id="@+id/tv_current_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_to_encode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_text_prompt"
+        android:text="Hello World!" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
+    <Button
+        android:id="@+id/btn_get_base64"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/get_base64" />
+
+    <Button
+        android:id="@+id/btn_new_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/go_new_activity" />
+
+</LinearLayout>

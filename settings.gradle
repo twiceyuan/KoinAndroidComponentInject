@@ -1,0 +1,4 @@
+rootProject.name='KoinAndroidComponentInject'
+include ':sample'
+include ':sample-module'
+include ':android-component-inject'

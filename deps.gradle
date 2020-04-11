@@ -1,0 +1,10 @@
+def koin = [:]
+
+koin.verison = '2.1.5'
+koin.gradle_plugin = "org.koin:koin-gradle-plugin:$koin.verison"
+koin.code = "org.koin:koin-core:$koin.verison"
+koin.ext = "org.koin:koin-core-ext:$koin.verison"
+koin.android = "org.koin:koin-android:$koin.verison"
+koin.android_scope = "org.koin:koin-android-scope:$koin.verison"
+
+ext.koin = koin

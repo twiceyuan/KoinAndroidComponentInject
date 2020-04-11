@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WhyKoin</string>
+    <string name="input_text_prompt">输入文字获取它的 Base64</string>
+    <string name="get_base64">获取 Base64</string>
+    <string name="go_new_activity">跳转新的 Activity</string>
+    <string name="current_activity">当前 Activity\n%s</string>
+    <string name="start_custom_scope_activity">启动自定义 Scope Activity</string>
+    <string name="start_lifecycle_scope_activity">启动 Lifecycle Scope Activity</string>
+</resources>
