@@ -2,9 +2,9 @@ package com.twiceyuan.componentinject.di
 
 import android.content.Context
 import com.twiceyuan.android.component.inject.currentActivity
-import com.twiceyuan.componentinject.impl.Base64EncoderImpl
-import com.twiceyuan.componentinject.impl.ShowDialogImpl
-import com.twiceyuan.componentinject.impl.ToasterImpl
+import com.twiceyuan.componentinject.ModuleOne
+import com.twiceyuan.componentinject.ModuleTwo
+import com.twiceyuan.componentinject.impl.*
 import com.twiceyuan.componentinject.submodule.Base64Encoder
 import com.twiceyuan.componentinject.submodule.EncodeViewModel
 import com.twiceyuan.componentinject.submodule.ShowDialog
@@ -22,8 +22,13 @@ fun Context.initKoin() {
     startKoin {
         androidLogger(level = Level.DEBUG)
         androidContext(this@initKoin)
-        modules(base64Module)
+        modules(base64Module, cycleModule)
     }
+}
+
+private val cycleModule = module {
+    single { ModuleOneImpl() } bind ModuleOne::class
+    single { ModuleTwoImpl() } bind ModuleTwo::class
 }
 
 private val base64Module = module {
